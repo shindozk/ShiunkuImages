@@ -1,0 +1,31 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2024-11-06T10:38:09+01:00",
+    "name": "Lavalink",
+    "author": "cohohohn04@gmail.com",
+    "description": "Lavalink v4 - High-performance audio sending node",
+    "features": null,
+    "docker_images": {
+        "ghcr.io\/coho04\/pterodactyl-docker-images:java_21": "ghcr.io\/coho04\/pterodactyl-docker-images:java_21"
+    },
+    "file_denylist": [],
+    "startup": "java -jar Lavalink.jar --server.port={{SERVER_PORT}}",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"Lavalink is ready to accept connections.\"\r\n}",
+        "logs": "{\r\n    \"location\": \"logs\/\"\r\n}",
+        "stop": "^^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/sh\r\n# Lavalink Installation Script\r\n#\r\n# Server Files: \/mnt\/server\r\necho -e \"[SETUP] Install packages\"\r\napt-get update -qq > \/dev\/null 2>&1 && apt-get install -qq > \/dev\/null 2>&1 -y curl\r\n\r\ncd \/mnt\/server\r\n\r\ncurl -L https:\/\/github.com\/lavalink-devs\/Lavalink\/releases\/latest\/download\/Lavalink.jar -o Lavalink.jar\r\n\r\n## Installation end\r\necho -e \"[SETUP] Installation completed...\"\r\n\r\n[ ! -f application.yml ] && curl -L -o application.yml https:\/\/raw.githubusercontent.com\/lavalink-devs\/Lavalink\/master\/LavalinkServer\/application.yml.example\r\n\r\nsed -i \"s\/port: [0-9]*\/port: ${PORT}\/\" application.yml\r\n\r\nmkdir -p plugins",
+            "container": "debian:bookworm-slim",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": []
+}
