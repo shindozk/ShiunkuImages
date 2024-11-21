@@ -1,7 +1,7 @@
 {
-  "Image": "https://raw.githubusercontent.com/shindozk/skyport-shiunku/main/images/docker_images/nodejs/v20/Dockerfile",
+  "Image": "ghcr.io/shindozk/skyport-shiunku-images:nodejs-v20",
   "AltImages": [
-    "https://raw.githubusercontent.com/shindozk/skyport-shiunku/main/images/docker_images/nodejs/v20/Dockerfile"
+    "ghcr.io/shindozk/skyport-shiunku-images:nodejs-v20"
   ],
   "Cmd": "",
   "Env": [
@@ -11,15 +11,15 @@
   "Scripts": {
     "Install": [
       {
-        "Uri": "https://raw.githubusercontent.com/shindozk/skyport-shiunku/main/images/nodejs/package.json",
+        "Uri": "https://raw.githubusercontent.com/shindozk/skyport-shiunku-images/main/nodejs/package.json",
         "Path": "package.json"
       }
     ]
   },
   "Name": "Generic: Node.js 20",
   "Description": "Imagem otimizada para Node.js 20 com suporte para bibliotecas populares e aplicações modernas.",
-  "Author": "youremail@example.com",
-  "AuthorName": "Seu Nome",
+  "Author": "otakuzintv@gmail.com",
+  "AuthorName": "ShindoZk",
   "Meta": {
     "Version": "1.0"
   }
