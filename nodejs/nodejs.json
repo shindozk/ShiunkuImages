@@ -1,7 +1,7 @@
 {
-  "Image": "ghcr.io/shindozk/skyport-shiunku-images:nodejs-v20",
+  "Image": "docker.io/shindozk/skyport-shiunku-images:nodejs-v20",
   "AltImages": [
-    "ghcr.io/shindozk/skyport-shiunku-images:nodejs-v20"
+    "docker.io/shindozk/skyport-shiunku-images:nodejs-v20"
   ],
   "Cmd": "",
   "Env": [
