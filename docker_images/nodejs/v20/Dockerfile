@@ -14,11 +14,13 @@ RUN npm install npm@latest -g
 # Crie o usuário "container" para rodar a aplicação
 RUN useradd -m -d /home/container -s /bin/bash container
 
-# Defina o diretório de trabalho como /app/data
+# Ajuste permissões do diretório de trabalho
 WORKDIR /app/data
+RUN chown -R container:container /app/data && chmod -R 755 /app/data
 
 # Altere para o usuário "container"
 USER container
 
-# Comando padrão para iniciar a instância
-CMD ["/bin/bash", "-c", "$START"]
+# Comando padrão para executar o container
+ENTRYPOINT ["/bin/bash", "-c"]
+CMD ["${START:-echo 'No START command provided!'}"]
