@@ -12,14 +12,14 @@ RUN apt update \
 RUN npm install npm@latest -g
 
 # Define o diretório de trabalho
-WORKDIR /app/data
+WORKDIR /home/container
 
-# Adiciona o script de entrada diretamente no Dockerfile
+# Adiciona o script de inicialização diretamente no Dockerfile
 RUN echo '#!/bin/bash \n\
 # Exibe a versão do Node.js \n\
 node -v \n\
 # Mostra o comando START configurado pelo usuário \n\
-echo ":/app/data$ ${START}" \n\
+echo ":/home/container$ ${START}" \n\
 # Substitui e executa o comando START \n\
 eval ${START}' > /entrypoint.sh && chmod +x /entrypoint.sh
 
