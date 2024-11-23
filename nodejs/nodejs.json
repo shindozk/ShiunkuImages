@@ -5,7 +5,7 @@
   ],
   "Cmd": "",
   "Env": [
-    "START=npm install; node ."
+    "START=npm init -y; npm install; node ."
   ],
   "StopCommand": "stop",
   "Scripts": {
