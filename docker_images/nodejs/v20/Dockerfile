@@ -15,10 +15,12 @@ WORKDIR /app/data
 RUN echo '#!/bin/bash \n\
 # Exibe a versão do Node.js \n\
 node -v \n\
-# Mostra o comando START configurado pelo usuário \n\
-echo ":/app/data$ ${START}" \n\
-# Substitui e executa o comando START \n\
-eval ${START}' > /entrypoint.sh && chmod +x /entrypoint.sh
+# Instala todas as dependências necessárias \n\
+if [ -f package.json ]; then \n\
+    npm install --no-fund --no-audit \n\
+fi \n\
+# Executa o script principal \n\
+node .' > /entrypoint.sh && chmod +x /entrypoint.sh
 
 # Define o comando padrão para o container
 CMD ["sh", "/entrypoint.sh"]
