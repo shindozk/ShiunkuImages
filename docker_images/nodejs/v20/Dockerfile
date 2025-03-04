@@ -11,7 +11,7 @@ RUN npm install npm@latest -g
 WORKDIR /app/data
 
 # Baixa o script de entrypoint do seu repositório GitHub (substitua a URL abaixo pela URL correta)
-RUN curl -o /entrypoint.sh https://raw.githubusercontent.com/shindozk/skyport-shiunku-images/main/entrypoint.sh && chmod +x /entrypoint.sh
+RUN curl -o /entrypoint.sh https://raw.githubusercontent.com/shindozk/skyport-shiunku-images/main/docker_images/nodejs/v20/entrypoint.sh && chmod +x /entrypoint.sh
 
 # Define o comando padrão para o container
 CMD ["/bin/bash", "/entrypoint.sh"]
