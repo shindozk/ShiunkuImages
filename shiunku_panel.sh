@@ -26,3 +26,5 @@ npm run createUser
 # Start the Shiunku Panel
 echo "🚀 Starting Shiunku Panel..."
 node .
+
+echo "✅ Shiunku Panel is now running!"
