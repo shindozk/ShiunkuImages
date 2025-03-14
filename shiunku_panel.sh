@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Shiunku Panel Installer v0.0.5
+# Shiunku Panel Installer v0.0.5
 
 # Clone the repository and navigate into it
 echo "🚀 Cloning the Shiunku Panel repository..."
