@@ -1,27 +1,28 @@
 #!/bin/bash
 
-# Nome do repositório no Docker Hub
+# Docker Hub repository details
 DOCKER_HUB_USERNAME="shindozk"
 REPO_NAME="shiunku-images"
 
-# Caminho base das imagens
+# Base path for images
 BASE_PATH="./docker_images"
 
-# Função para construir e fazer push de uma imagem
+# Function to build and push an image
 build_and_push() {
-    local path="$1"
+    local path="$1"    # This should be a directory containing the Dockerfile
     local tag="$2"
 
-    echo "📦 Construindo a imagem: $tag a partir de $path"
-    docker build -t "$tag" "$path" || exit 1
+    echo "📦 Building image: $tag from $path"
+    # If your Dockerfile is not in the root of the directory, specify its path using -f
+    docker build -f "$path/Dockerfile" -t "$tag" "$path" || exit 1
 
-    echo "🚀 Fazendo push da imagem: $tag"
+    echo "🚀 Pushing image: $tag"
     docker push "$tag" || exit 1
 
-    echo "✅ Imagem registrada com sucesso: $tag"
+    echo "✅ Successfully pushed image: $tag"
 }
 
-# Loop pelas pastas e cria tags automaticamente
+# Loop through folders and create tags automatically
 for language in $(ls "$BASE_PATH"); do
     for version in $(ls "$BASE_PATH/$language"); do
         IMAGE_PATH="$BASE_PATH/$language/$version"
@@ -31,8 +32,8 @@ for language in $(ls "$BASE_PATH"); do
     done
 done
 
-echo "🎉 Todas as imagens foram registradas no Docker Hub com sucesso!"
+echo "🎉 All images have been successfully pushed to Docker Hub!"
 
-# docker build -t yourusername/yourimage:tag ./repository
+# docker build -f ./docker_images/nodejs/Dockerfile -t shindozk/shiunku-images:nodejs-lts ./docker_images/nodejs
 
 # docker push yourusername/yourimage:tag
