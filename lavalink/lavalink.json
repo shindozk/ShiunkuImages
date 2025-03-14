@@ -2,7 +2,8 @@
     "Image": "ghcr.io/ma4z-sys/yolks:java",
     "Cmd": "",
     "Env": [
-      "START=java -jar Lavalink.jar"
+      "START=java -jar Lavalink.jar",
+      "SERVER_PORT=2333"
     ],
     "StopCommand": "^^C",
     "features": [],
