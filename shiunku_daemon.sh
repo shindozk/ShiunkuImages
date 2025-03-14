@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Shiunku Daemon Installer v0.0.5
+# Shiunku Daemon Installer v0.0.5
 
 # Clone the repository and enter the directory
 echo "🚀 Cloning the Shiunku Daemon repository..."
