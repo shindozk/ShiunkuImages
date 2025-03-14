@@ -1,23 +1,23 @@
 {
-  "Image": "docker.io/shindozk/skyport-shiunku-images:nodejs-v20",
+  "Image": "docker.io/shindozk/shiunku-images:nodejs-lts",
   "AltImages": [
-    "docker.io/shindozk/skyport-shiunku-images:nodejs-v20"
+    "docker.io/shindozk/shiunku-images:nodejs-lts"
   ],
   "Cmd": "",
   "Env": [
-    "START=npm install --no-fund --no-audit; node ."
+    "START=npm install", "START2=npm run start"
   ],
   "StopCommand": "stop",
   "Scripts": {
     "Install": [
       {
-        "Uri": "https://raw.githubusercontent.com/shindozk/skyport-shiunku-images/main/nodejs/package.json",
+        "Uri": "https://raw.githubusercontent.com/shindozk/ShiunkuImages/main/nodejs/package.json",
         "Path": "package.json"
       }
     ]
   },
   "Name": "Generic: Node.js 20",
-  "Description": "Imagem otimizada para Node.js 20 com suporte para bibliotecas populares e aplicações modernas.",
+  "Description": "Node.js is a runtime environment that enables JavaScript code to run outside of web browsers, known for its efficiency in building scalable network applications and backend APIs. It utilizes an event-driven, non-blocking I/O model and boasts a vast ecosystem of packages (npm), making it ideal for modern web development across platforms.",
   "Author": "otakuzintv@gmail.com",
   "AuthorName": "ShindoZk",
   "Meta": {

@@ -2,7 +2,7 @@
 
 # Nome do repositório no Docker Hub
 DOCKER_HUB_USERNAME="shindozk"
-REPO_NAME="skyport-shiunku-images"
+REPO_NAME="shiunku-images"
 
 # Caminho base das imagens
 BASE_PATH="./docker_images"
@@ -32,3 +32,7 @@ for language in $(ls "$BASE_PATH"); do
 done
 
 echo "🎉 Todas as imagens foram registradas no Docker Hub com sucesso!"
+
+# docker build -t yourusername/yourimage:tag ./repository
+
+# docker push yourusername/yourimage:tag

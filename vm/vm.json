@@ -1,0 +1,19 @@
+{
+    "Image": "ghcr.io/hydrenoffical/hydravm:latest",
+    "AltImages": [
+      "ghcr.io/hydrenoffical/hydravm:latest"
+    ],
+    "Cmd": "",
+    "Env": [
+      "START=bash"
+    ],
+    "StopCommand": "stop",
+    "features": null,
+    "Name": "HydraVM",
+    "Description": "VM running inside HydraPanel.",
+    "Author": "ma4z@ma4z.us.kg",
+    "AuthorName": "Hydren INC",
+    "Meta": {
+      "Version": "Hydren Images v2"
+    }
+  }

@@ -1,3 +1,8 @@
 [
-  "https://raw.githubusercontent.com/shindozk/skyport-shiunku-images/main/nodejs/nodejs.json"
+  "https://raw.githubusercontent.com/shindozk/ShiunkuImages/main/nodejs/nodejs.json",
+  "https://raw.githubusercontent.com/shindozk/ShiunkuImages/main/python/python.json",
+  "https://raw.githubusercontent.com/shindozk/ShiunkuImages/main/papermc/papermc.json",
+  "https://raw.githubusercontent.com/shindozk/ShiunkuImages/main/spigotmc/spigotmc.json",
+  "https://raw.githubusercontent.com/shindozk/ShiunkuImages/main/lavalink/lavalink.json",
+  "https://raw.githubusercontent.com/shindozk/ShiunkuImages/main/vm/vm.json"
 ]

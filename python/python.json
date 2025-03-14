@@ -1,11 +1,8 @@
 {
-    "Image": "quay.io/skyport/python:lts",
-    "AltImages": [
-      "quay.io/skyport/python:lts"
-    ],
+    "Image": "ghcr.io/ma4z-sys/yolks:python",
     "Cmd": "",
     "Env": [
-      "START=pip install -r requirements.txt && python app.js"
+      "START=pip install -r requirements.txt", "START2=python app.py"
     ],
     "StopCommand": "stop",
     "Scripts": {
